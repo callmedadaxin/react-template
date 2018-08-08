@@ -14,7 +14,19 @@
     "transform-decorators-legacy",
     "transform-class-properties",
     "syntax-dynamic-import",
-    "react-loadable/babel"
+    "react-loadable/babel",
+    [
+      "react-css-modules",
+      {
+        "filetypes":{
+          ".scss":{
+            "syntax":"postcss-scss"
+          }
+        },
+        "generateScopedName": "[name]-[local]-[hash:base64:5]",
+        "webpackHotModuleReloading":true
+      }
+    ]
   ],
   "env": {}
 }

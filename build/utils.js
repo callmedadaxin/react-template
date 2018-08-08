@@ -18,7 +18,9 @@ exports.cssLoaders = function (options) {
   const cssLoader = {
     loader: 'css-loader',
     options: {
-      sourceMap: options.sourceMap
+      sourceMap: options.sourceMap,
+      modules: true,
+      localIdentName: "[name]-[local]-[hash:base64:5]"
     }
   }
 

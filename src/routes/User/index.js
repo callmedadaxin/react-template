@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import UserComp from './components'
 
 @connect(state => state.User)
 export default class User extends PureComponent {
@@ -8,11 +9,8 @@ export default class User extends PureComponent {
   }
 
   render () {
-    console.log(this.props)
     return (
-      <div>
-        User
-      </div>
+      <UserComp {...this.props}/>
     )
   }
 }
